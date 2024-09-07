@@ -42,7 +42,14 @@ public class CipherUtils {
    * @return the string encrypted (String)
    */
   public static String caesarEncrypt(String str, char letter) {
-    return str;
+    char[] input = str.toCharArray();
+
+    for (int i = 0; i < input.length; i++) {
+      input[i] =
+          CipherUtils.int2letter(CipherUtils.letter2int(letter) + CipherUtils.letter2int(input[i]));
+    } // for loop that encrypt each character
+
+    return new String(input);
   } // caesarEncrypt(String, char)
 
   /**
