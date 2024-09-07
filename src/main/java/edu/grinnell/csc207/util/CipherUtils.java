@@ -82,6 +82,8 @@ public class CipherUtils {
    * @return the string encrypted (String)
    */
   public static String vigenereEncrypt(String str, String key) {
+    // avoid division by zero
+    if (key.length() == 0) {
     return str;
   } // vigenereEncrypt(String, String)
 
