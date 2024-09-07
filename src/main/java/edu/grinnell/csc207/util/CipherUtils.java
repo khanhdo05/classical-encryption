@@ -12,7 +12,7 @@ public class CipherUtils {
    * @return the integer value of the letter (int)
    */
   private static int letter2int(char letter) {
-    return 0;
+    return (int) letter - (int) 'a';
   } // letter2int(char)
 
   /**
