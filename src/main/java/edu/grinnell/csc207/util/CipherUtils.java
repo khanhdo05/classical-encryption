@@ -22,8 +22,14 @@ public class CipherUtils {
    *
    * @return the letter corresponding to the integer (char)
    */
-  private static int int2letter(int i) {
-    return 'a';
+  private static char int2letter(int i) {
+    int modResult = i % 26;
+
+    if (modResult < 0) {
+      modResult += 26;
+    } // handle negative mod
+
+    return (char) (modResult + (int) 'a');
   } // int2letter(int)
 
   /**
