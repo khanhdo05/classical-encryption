@@ -111,5 +111,16 @@ public class CipherUtils {
     // avoid division by zero
     if (key.length() == 0) {
     return str;
+    } // if key is empty, return original string
+
+    char[] input = str.toCharArray();
+    char[] keyChars = key.toCharArray();
+
+    for (int i = 0; i < input.length; i++) {
+      input[i] = CipherUtils.int2letter(CipherUtils.letter2int(input[i])
+          + CipherUtils.letter2int(keyChars[i % keyChars.length]) * -1);
+    } // for loop that decrypt each character
+
+    return new String(input);
   } // vigenereDecrypt(String, String)
 } // class CipherUtils
