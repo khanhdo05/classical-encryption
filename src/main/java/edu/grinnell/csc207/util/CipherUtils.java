@@ -1,13 +1,15 @@
 package edu.grinnell.csc207.util;
 
-/*  
+/*
  * CipherUtils: Contains utility methods for encryption and decryption.
  */
 public class CipherUtils {
   /*
-   *  Converts a letter to its corresponding integer value
-   *  @param letter the letter to be converted (char)
-   *  @return the integer value of the letter (int)
+   * Converts a letter to its corresponding integer value
+   * 
+   * @param letter the letter to be converted (char)
+   * 
+   * @return the integer value of the letter (int)
    */
   private static int letter2int(char letter) {
     return 0; // STUB
