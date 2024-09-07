@@ -49,6 +49,13 @@ Before running the code, make sure you have the following installed:
 4. **Build Tools**
    - Maven will handle project dependencies and building. Ensure Maven is configured correctly as described above.
 
+### To use `prettier` to format code
+
+- In VSCode, `ctrl` + `shift` + `P`
+- Choose `Format Document`
+- Choose `Configure`
+- Choose accordingly
+
 ### Caesar Cipher
 
 To encode a string with the Caesar Cipher:
