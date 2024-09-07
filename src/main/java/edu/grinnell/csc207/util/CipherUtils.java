@@ -84,7 +84,7 @@ public class CipherUtils {
   public static String vigenereEncrypt(String str, String key) {
     // avoid division by zero
     if (key.length() == 0) {
-    return str;
+      return str;
     } // if key is empty, return original string
 
     char[] input = str.toCharArray();
@@ -110,7 +110,7 @@ public class CipherUtils {
   public static String vigenereDecrypt(String str, String key) {
     // avoid division by zero
     if (key.length() == 0) {
-    return str;
+      return str;
     } // if key is empty, return original string
 
     char[] input = str.toCharArray();
