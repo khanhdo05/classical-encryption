@@ -108,6 +108,8 @@ public class CipherUtils {
    * @return the string decrypted (String)
    */
   public static String vigenereDecrypt(String str, String key) {
+    // avoid division by zero
+    if (key.length() == 0) {
     return str;
   } // vigenereDecrypt(String, String)
 } // class CipherUtils
