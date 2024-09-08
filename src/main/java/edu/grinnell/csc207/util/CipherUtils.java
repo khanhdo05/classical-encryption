@@ -89,20 +89,7 @@ public class CipherUtils {
    * @return the string encrypted (String)
    */
   public static String vigenereEncrypt(String str, String key) {
-    // avoid division by zero
-    if (key.length() == 0) {
-      return str;
-    } // if key is empty, return original string
-
-    char[] input = str.toCharArray();
-    char[] keyChars = key.toCharArray();
-
-    for (int i = 0; i < input.length; i++) {
-      input[i] = CipherUtils.int2letter(
-          CipherUtils.letter2int(input[i]) + CipherUtils.letter2int(keyChars[i % keyChars.length]));
-    } // for loop that encrypt each character
-
-    return new String(input);
+    return CipherUtils.vigenereXcrypt(str, key, 1);
   } // vigenereEncrypt(String, String)
 
   /**
@@ -115,6 +102,18 @@ public class CipherUtils {
    * @return the string decrypted (String)
    */
   public static String vigenereDecrypt(String str, String key) {
+    return CipherUtils.vigenereXcrypt(str, key, -1);
+  } // vigenereDecrypt(String, String)
+
+  /**
+   * Helper method for vigenereEncrypt and vigenereDecrypt.
+   *
+   * @param str the string to be encrypted or decrypted
+   * @param key the key to be used for encryption or decryption
+   * @param mode either 1 for encrypt or -1 for decrypt
+   * @return a string encrypted or decrypted by a given key
+   */
+  private static String vigenereXcrypt(String str, String key, int mode) {
     // avoid division by zero
     if (key.length() == 0) {
       return str;
@@ -125,9 +124,9 @@ public class CipherUtils {
 
     for (int i = 0; i < input.length; i++) {
       input[i] = CipherUtils.int2letter(CipherUtils.letter2int(input[i])
-          + CipherUtils.letter2int(keyChars[i % keyChars.length]) * -1);
+          + CipherUtils.letter2int(keyChars[i % keyChars.length]) * mode);
     } // for loop that decrypt each character
 
     return new String(input);
-  } // vigenereDecrypt(String, String)
+  } // vigenereXcrypt(String, String, int)
 } // class CipherUtils
