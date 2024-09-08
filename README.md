@@ -19,13 +19,14 @@ This project implements classical encryption techniques, including the Caesar Ci
 
 ## GitHub Repository
 
-[GitHub Repository](https://github.com/khanhdo05/classical-encryption)https://github.com/khanhdo05/classical-encryption
+[GitHub Repository: ](https://github.com/khanhdo05/classical-encryption)https://github.com/khanhdo05/classical-encryption
 
 ## Files
 
 - `edu/grinnell/csc207/util/CipherUtils.java`: Contains utility methods for encryption and decryption.
 - `edu/grinnell/csc207/main/AllCaesar.java`: Main class for encoding and decoding using the Caesar Cipher.
 - `edu/grinnell/csc207/main/Cipher.java`: Main class for handling various ciphers with command-line arguments.
+- `classical-encryption-1.0.jar`: The end result of this Maven project.
 
 ## Running the Program
 
@@ -67,7 +68,11 @@ Before running the code, make sure you have the following installed:
 
 ### Run Cipher program
 
-1. At the root directory, run `java -cp target/classical-encryption-1.0.jar edu.grinnell.csc207.main.Cipher -encode -caesar hello x` to encode caesar mode hello by key x
+1. At the root directory, run
+
+- `java -jar target/classical-encryption-1.0.jar -encode -caesar hello x`
+  to encode caesar mode hello by key x
+
 2. Change the above command to your need.
 
 - "-encode" or "-decode"
