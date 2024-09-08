@@ -46,14 +46,19 @@ public class Cipher {
         switch (arg) {
           case "-encode":
             action = "encode";
+            break;
           case "-decode":
             action = "decode";
+            break;
           case "-caesar":
             cipher = "caesar";
+            break;
           case "-vigenere":
             cipher = "vigenere";
+            break;
           default:
             err.println("Error: Invalid option");
+            return;
         } // switch
       } else {
         if (text == null) {
