@@ -1,10 +1,12 @@
-# Classical Encryption
+# Mini-Project 1: Classical Encryption
 
 ## Name
 
 Khanh Do
 
 ## Description
+
+**A project for CSC-207 2024Fa.**
 
 This project implements classical encryption techniques, including the Caesar Cipher and the Vigenère Cipher. The project is designed to practice basic programming skills and understand classical cryptographic methods.
 
