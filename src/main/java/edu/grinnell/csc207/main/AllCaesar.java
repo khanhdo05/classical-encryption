@@ -9,6 +9,13 @@ import edu.grinnell.csc207.util.CipherUtils;
  */
 public class AllCaesar {
   /**
+   * The default number of command-line arguments.
+   *
+   * @value 2
+   */
+  private static final int DEFAULT_ARG_LENGTH = 2;
+
+  /**
    * The main method is the entry point of the application.
    *
    * @param args the command-line arguments passed to the program
@@ -21,7 +28,7 @@ public class AllCaesar {
     PrintWriter err = new PrintWriter(System.err, true);
 
     // check arguments length
-    if (args.length != 2) {
+    if (args.length != DEFAULT_ARG_LENGTH) {
       err.println("Incorrect number of parameters");
     } // if
 
@@ -32,7 +39,6 @@ public class AllCaesar {
     if (!command.equals("encode") && !command.equals("decode")) {
       err.println("Error: Invalid option:" + "\"" + command
           + "\". Valid options are \"encode\" or \"decode\".");
-      System.exit(1);
     } // if invalid command then print error message
 
     // get string to encode/decode
@@ -43,7 +49,6 @@ public class AllCaesar {
       char c = str.charAt(i);
       if (!Character.isLowerCase(c)) {
         err.println("Error: String contains characters other than lowercase letters.");
-        System.exit(1);
       } // if
     } // for
 

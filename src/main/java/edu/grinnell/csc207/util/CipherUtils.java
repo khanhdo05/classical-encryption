@@ -5,6 +5,13 @@ package edu.grinnell.csc207.util;
  */
 public class CipherUtils {
   /**
+   * The size of the alphabet.
+   *
+   * @value 26
+   */
+  private static final int ALPHABET_SIZE = 26;
+
+  /**
    * Converts a letter to its corresponding integer value.
    *
    * @param letter the letter to be converted (char)
@@ -23,10 +30,10 @@ public class CipherUtils {
    * @return the letter corresponding to the integer (char)
    */
   private static char int2letter(int i) {
-    int modResult = i % 26;
+    int modResult = i % ALPHABET_SIZE;
 
     if (modResult < 0) {
-      modResult += 26;
+      modResult += ALPHABET_SIZE;
     } // handle negative mod
 
     return (char) (modResult + (int) 'a');
