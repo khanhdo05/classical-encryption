@@ -66,7 +66,7 @@ public class CipherUtils {
 
     for (int i = 0; i < input.length; i++) {
       input[i] =
-          CipherUtils.int2letter(CipherUtils.letter2int(letter) - CipherUtils.letter2int(input[i]));
+          CipherUtils.int2letter(CipherUtils.letter2int(CipherUtils.int2letter(input[i] - letter)));
     } // for loop that decrypt each character
 
     return new String(input);

@@ -13,9 +13,11 @@ public class Cipher {
    */
   public static void main(String[] args) {
     PrintWriter pen = new PrintWriter(System.out, true);
+
+    // print out each element in the args
     for (int i = 0; i < args.length; i++) {
       pen.printf("args[%d] = \"%s\"\n", i, args[i]);
-    } // for loop that print out each element in the array
+    } // for
     pen.close();
     System.err.println("Error: Invalid parameters");
   } // main(String[])

@@ -56,7 +56,10 @@ Before running the code, make sure you have the following installed:
 - Choose `Configure`
 - Choose accordingly
 
-### Caesar Cipher
+### Run the program
+
+1. Compile by running `mvn compile -q` in the root directory
+2. Navigate to target/classes by running
 
 To encode a string with the Caesar Cipher:
 
