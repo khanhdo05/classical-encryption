@@ -56,13 +56,19 @@ Before running the code, make sure you have the following installed:
 - Choose `Configure`
 - Choose accordingly
 
-### Run the program
+### Run the AllCeasar program
 
 1. Compile by running `mvn compile -q` in the root directory
-2. Navigate to target/classes by running
+2. Navigate to target/classes by running `target/classes`
+3. Run in the terminal `java edu.grinnell.csc207.main.AllCaesar encode helloworld` to encode `helloworld`.
+4. Run in the terminal `java edu.grinnell.csc207.main.AllCaesar decode helloworld` to decode `helloworld`.
 
-To encode a string with the Caesar Cipher:
+### Run Cipher program
 
-```bash
-java edu.grinnell.csc207.main.AllCaesar encode "yourstring"
-```
+1. At the root directory, run `java -cp target/classical-encryption-1.0.jar edu.grinnell.csc207.main.Cipher -encode -caesar hello x` to encode caesar mode hello by key x
+2. Change the above command to your need.
+
+- "-encode" or "-decode"
+- "-caesar" or "-vigenere"
+- "stringtotransform"
+- "key" (_for caesar mode, key has to be 1 character_)
