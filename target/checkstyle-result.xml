@@ -2,4 +2,6 @@
 <checkstyle version="9.3">
 <file name="/home/khoai/dev/csc207/mini-projects/classical-encryption/src/main/java/edu/grinnell/csc207/main/Cipher.java">
 </file>
+<file name="/home/khoai/dev/csc207/mini-projects/classical-encryption/src/main/java/edu/grinnell/csc207/main/AllCaesar.java">
+</file>
 </checkstyle>

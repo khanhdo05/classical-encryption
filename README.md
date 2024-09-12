@@ -59,19 +59,42 @@ Before running the code, make sure you have the following installed:
 - Choose `Configure`
 - Choose accordingly
 
+### To run test
+
+```bash
+mvn test -q
+```
+
+### To check style
+
+```bash
+mvn checkstyle:check -q
+```
+
 ### Run the AllCeasar program
 
 1. Compile by running `mvn compile -q` in the root directory
 2. Navigate to target/classes by running `target/classes`
-3. Run in the terminal `java edu.grinnell.csc207.main.AllCaesar encode helloworld` to encode `helloworld`.
-4. Run in the terminal `java edu.grinnell.csc207.main.AllCaesar decode helloworld` to decode `helloworld`.
+3. Run in the terminal
+   ```bash
+   java edu.grinnell.csc207.main.AllCaesar encode helloworld
+   ```
+   to encode `helloworld`.
+4. Run in the terminal
+   ```bash
+   java edu.grinnell.csc207.main.AllCaesar decode helloworld
+   ```
+   to decode `helloworld`.
 
 ### Run Cipher program
 
 1. At the root directory, run
 
-- `java -jar target/classical-encryption-1.0.jar -encode -caesar hello x`
-  to encode caesar mode hello by key x
+   ```bash
+   java -jar target/classical-encryption-1.0.jar -encode -caesar hello x
+   ```
+
+   to encode caesar mode hello by key x
 
 2. Change the above command to your need.
 

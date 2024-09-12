@@ -29,7 +29,8 @@ public class AllCaesar {
 
     // check arguments length
     if (args.length != DEFAULT_ARG_LENGTH) {
-      err.println("Incorrect number of parameters");
+      err.println("Error: Incorrect number of parameters");
+      return;
     } // if
 
     // get command
@@ -52,6 +53,20 @@ public class AllCaesar {
       } // if
     } // for
 
+    printAllCaesar(pen, command, str);
+
+    // close pen
+    pen.close();
+  } // main(String[])
+
+  /**
+   * Print all Caesar encoded/decoded strings for each lowercase letter.
+   *
+   * @param pen
+   * @param command
+   * @param str
+   */
+  private static void printAllCaesar(PrintWriter pen, String command, String str) {
     // print encoded/decoded string for each lowercase letter
     for (char ch = 'a'; ch <= 'z'; ch++) {
       // check if command is encode or decode to use the appropriate method
@@ -61,8 +76,5 @@ public class AllCaesar {
         pen.printf("n = %c: %s\n", ch, CipherUtils.caesarDecrypt(str, ch));
       } // if
     } // for
-
-    // close pen
-    pen.close();
-  } // main(String[])
+  } // printAllCaesar(PrintWriter, String, String)
 } // class AllCaesar

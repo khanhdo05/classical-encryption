@@ -31,13 +31,14 @@ public class Cipher {
     // check arguments length
     if (args.length != DEFAULT_ARG_LENGTH) {
       err.println("Error: Incorrect number of parameters");
+      return;
     } // if
 
     // Initialize variables to hold arguments later
-    String action = null;
-    String cipher = null;
-    String text = null;
-    String key = null;
+    String action = "";
+    String cipher = "";
+    String text = "";
+    String key = "";
 
     for (String arg : args) {
       // evaluate each argument
@@ -61,7 +62,7 @@ public class Cipher {
             return;
         } // switch
       } else {
-        if (text == null) {
+        if (text.equals("")) {
           text = arg;
         } else {
           key = arg;
@@ -70,8 +71,17 @@ public class Cipher {
     } // for
 
     // make sure all arguments are valid
-    if (action == null || cipher == null || text == null || key == null) {
+    if (action.equals("") || cipher.equals("") || text.equals("") || key.equals("")) {
       System.err.println("Error: Missing required arguments.");
+      return;
+    } // if
+
+    // make sure all arguments are lowercase
+    if (!Cipher.isArgumentLowercaseAndNoSpaces(action)
+        || !Cipher.isArgumentLowercaseAndNoSpaces(cipher)
+        || !Cipher.isArgumentLowercaseAndNoSpaces(text)
+        || !Cipher.isArgumentLowercaseAndNoSpaces(key)) {
+      System.err.println("Error: Arguments are not lowercase or have spaces.");
       return;
     } // if
 
@@ -81,6 +91,21 @@ public class Cipher {
       return;
     } // if
 
+    printByActionAndCipher(pen, action, cipher, text, key);
+    pen.close();
+  } // main(String[])
+
+  /**
+   * Prints result by action and cipher.
+   *
+   * @param pen
+   * @param action
+   * @param cipher
+   * @param text
+   * @param key
+   */
+  private static void printByActionAndCipher(PrintWriter pen, String action, String cipher,
+      String text, String key) {
     if (cipher.equals("caesar")) {
       if (action.equals("encode")) {
         pen.println(CipherUtils.caesarEncrypt(text, key.charAt(0)));
@@ -94,6 +119,15 @@ public class Cipher {
         pen.println(CipherUtils.vigenereDecrypt(text, key));
       } // if
     } // if
-    pen.close();
-  } // main(String[])
+  } // printByActionAndCipher(PrintWriter, String, String, String, String)
+
+  /**
+   * Checks if an argument is lowercase and has no spaces.
+   *
+   * @param arg
+   * @return a boolean
+   */
+  private static boolean isArgumentLowercaseAndNoSpaces(String arg) {
+    return arg.equals(arg.toLowerCase().replaceAll("\\s+", ""));
+  } // isArgumentLowercaseAndNoSpaces(String)
 } // class Cipher
