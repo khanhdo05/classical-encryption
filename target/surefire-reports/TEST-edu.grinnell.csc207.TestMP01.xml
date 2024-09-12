@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.grinnell.csc207.TestMP01" time="0.08" tests="34" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.grinnell.csc207.TestMP01" time="0.072" tests="34" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/khoai/dev/csc207/mini-projects/classical-encryption/target/surefire/surefirebooter-20240912123656466_3.jar /home/khoai/dev/csc207/mini-projects/classical-encryption/target/surefire 2024-09-12T12-36-56_402-jvmRun1 surefire-20240912123656466_1tmp surefire_0-20240912123656466_2tmp"/>
+    <property name="sun.java.command" value="/home/khoai/dev/csc207/mini-projects/classical-encryption/target/surefire/surefirebooter-20240912124703462_3.jar /home/khoai/dev/csc207/mini-projects/classical-encryption/target/surefire 2024-09-12T12-47-03_403-jvmRun1 surefire-20240912124703462_1tmp surefire_0-20240912124703462_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/khoai/dev/csc207/mini-projects/classical-encryption/target/test-classes:/home/khoai/dev/csc207/mini-projects/classical-encryption/target/classes:/home/khoai/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar:/home/khoai/.m2/repository/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar:/home/khoai/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/khoai/.m2/repository/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar:/home/khoai/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar:/home/khoai/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/khoai/dev/csc207/mini-projects/classical-encryption/target/surefire/surefirebooter-20240912123656466_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/khoai/dev/csc207/mini-projects/classical-encryption/target/surefire/surefirebooter-20240912124703462_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+7-Ubuntu-1ubuntu224.04"/>
     <property name="user.name" value="khoai"/>
@@ -51,30 +51,30 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testCaesarEncrypt" classname="edu.grinnell.csc207.TestMP01" time="0.014"/>
-  <testcase name="allCaesarEncryptEmptyString" classname="edu.grinnell.csc207.TestMP01" time="0.003"/>
-  <testcase name="allCaesarDecryptAlphabet" classname="edu.grinnell.csc207.TestMP01" time="0.002"/>
+  <testcase name="testCaesarEncrypt" classname="edu.grinnell.csc207.TestMP01" time="0.012"/>
+  <testcase name="allCaesarEncryptEmptyString" classname="edu.grinnell.csc207.TestMP01" time="0.002"/>
+  <testcase name="allCaesarDecryptAlphabet" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
   <testcase name="testCaesarEncryptReturnsNonEmptyString" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
   <testcase name="vigenereEncryptEmpty" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
-  <testcase name="testCaesarDecryptReturnsNonEmptyString" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
-  <testcase name="cipherEmptyKey" classname="edu.grinnell.csc207.TestMP01" time="0.006"/>
-  <testcase name="testVigenereEncryptReturnsNonEmptyString" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
+  <testcase name="testCaesarDecryptReturnsNonEmptyString" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
+  <testcase name="cipherEmptyKey" classname="edu.grinnell.csc207.TestMP01" time="0.005"/>
+  <testcase name="testVigenereEncryptReturnsNonEmptyString" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
   <testcase name="testVigenereDecryptReturnsNonEmptyString" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
   <testcase name="allCaesarEncryptAlphabet" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
-  <testcase name="cipherRuns" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
-  <testcase name="allCaesarDecryptEmptyString" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
+  <testcase name="cipherRuns" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
+  <testcase name="allCaesarDecryptEmptyString" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
   <testcase name="allCaesarRuns" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
-  <testcase name="cipherInvalidString" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
-  <testcase name="caesarDecryptEmpty" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
-  <testcase name="allCaesarErrorInvalidAction" classname="edu.grinnell.csc207.TestMP01" time="0.004"/>
+  <testcase name="cipherInvalidString" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
+  <testcase name="caesarDecryptEmpty" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
+  <testcase name="allCaesarErrorInvalidAction" classname="edu.grinnell.csc207.TestMP01" time="0.005"/>
   <testcase name="testVigenereDecrypt" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
   <testcase name="allCaesarErrorOneArgument" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
   <testcase name="allCaesarErrorThreeArguments" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
   <testcase name="cipherInvalidKey" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
   <testcase name="cipherVigenereEncrypt" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
-  <testcase name="testCaesarDecrypt" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
-  <testcase name="cipherBadCaesarKey" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
-  <testcase name="caesarEncryptEmpty" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
+  <testcase name="testCaesarDecrypt" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
+  <testcase name="cipherBadCaesarKey" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
+  <testcase name="caesarEncryptEmpty" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
   <testcase name="cipherVigenereDecode" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
   <testcase name="allCaesarEncryptHelloWorld" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
   <testcase name="cipherLongCaesarKey" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
@@ -82,7 +82,7 @@
   <testcase name="cipherCaesarEncrypt" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
   <testcase name="testVigenereEncrypt" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
   <testcase name="vigenereDecryptEmpty" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
-  <testcase name="allCaesarErrorZeroArguments" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
+  <testcase name="allCaesarErrorZeroArguments" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
   <testcase name="cipherCaesarDecode" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
-  <testcase name="allCaesarDecryptDahhksknhz" classname="edu.grinnell.csc207.TestMP01" time="0.001"/>
+  <testcase name="allCaesarDecryptDahhksknhz" classname="edu.grinnell.csc207.TestMP01" time="0.0"/>
 </testsuite>
